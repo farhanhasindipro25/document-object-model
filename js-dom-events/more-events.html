@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h1> Exploring more events</h1>
+    <button id="btn-click">Click</button>
+    <button id="btn-mouse-enter">Mouse Enter</button>
+    <button id="btn-mouse-move">Mouse Move</button>
+    <br><br>
+    <input type="text" id="focus-blur" placeholder="FOCUS-BLUR">
+    <br><br>
+    <input type="text" id="key-down" placeholder="KEYDOWN">
+    <br><br>
+    <input type="text" id="key-press" placeholder="KEYPRESS">
+    <br><br>
+    <input type="text" id="key-up" placeholder="KEYUP">
+
+
+    <script>
+        // click
+        document.getElementById('btn-click').addEventListener('click',function(){
+            console.log('Clicked');
+        });
+        // mouse enter
+        document.getElementById('btn-mouse-enter').addEventListener('mouseenter',function(){
+            console.log('Mouse Cursor Entered');
+        });
+        // mouse move
+        document.getElementById('btn-mouse-move').addEventListener('mousemove',function(){
+            console.log('Mouse Cursor Moved');
+        });
+        // focus
+        document.getElementById('focus-blur').addEventListener('focus',function(){
+            console.log('Input field on focus');
+        });
+        // blur
+        document.getElementById('focus-blur').addEventListener('blur',function(){
+            console.log('Input field blurred');
+        });
+        // keydown
+        document.getElementById('key-down').addEventListener('keydown',function(event){
+            console.log(event.target.value);
+        })
+        // keypress
+        document.getElementById('key-press').addEventListener('keypress',function(event){
+            console.log(event.target.value);
+        })
+        // keyup
+        document.getElementById('key-up').addEventListener('keyup',function(event){
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>

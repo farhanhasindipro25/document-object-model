@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM BASICS</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <style>
+            .section-one-container li{
+                color: green;
+            }
+            #section-one-title{
+                color:blue;
+            }
+            .important-items{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Welcome to DOM</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum odit voluptates odio aut nihil laudantium, ea fuga quos! Velit, nihil.</p>
+        </header>
+        <main id="main-container">
+            <section class="section-one-container">
+                <h3 id="section-one-title some-class random-class blue-bg"> Let's start learning </h3>
+                <ul>
+                    <li class="important-items">Item 1</li>
+                    <li class="important-items">Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </section>
+            <section>
+                <h3> Javascript </h3>
+                <ul>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                </ul>
+            </section>
+            <section id="section-three-container" class="large-text">
+                <h3 id="section-three-title"> Document Object Model (DOM)</h3>
+                <ul id="section-three-list">
+                    <li>Item 6</li>
+                    <li>Item 7</li>
+                    <li>Item 8</li>
+                </ul>
+            </section>
+            <section class="section-four-container">
+                <!-- <h3 id="section-four-title"> Document Object Model (DOM)</h3>
+                <ul>
+                    <li>Item 6</li>
+                    <li>Item 7</li>
+                    <li>Item 8</li>
+                </ul> -->
+            </section>
+        </main>
+
+        <!-- Inline JS -->
+        <script>
+            // console.log("This line is from inside of the HTML file");
+
+            // getElementsByTagName
+
+            const liCollection = document.getElementsByTagName('li');console.log(liCollection);
+
+            for(const li of liCollection){
+                // console.log(li);
+                // console.log(li.innerText);
+            }
+
+            const allHeadings = document.getElementsByTagName('h1');
+            for( const h1 of allHeadings){
+                // console.log(h1);
+                // console.log(h1.innerText);
+            }
+
+            // getElementById
+            const section3Title = document.getElementById('section-three-title');
+            section3Title.innerText = 'HELLO WORLD';
+            
+            // getElementsByClassName
+            const importantItems = document.getElementsByClassName('important-items');
+            // console.log(importantItems);
+            
+            for(const item of importantItems){
+                // console.log(item);
+                // console.log(item.innerText);
+            }
+            
+            // querySelector
+            const section3ListItems = document.querySelector('section-three-title li');
+
+            // querySelectorAll
+            const section1ListItems = document.querySelectorAll('section-one-title li');
+            
+            for(const li of section1ListItems){
+                // console.log(li);
+                // console.log(li.innerText);
+            }
+        </script>
+
+        <!-- External JS -->
+        <script src="./scripts/dom.js"></script>
+        <script src="./scripts/getElementsByTagName.js"></script>
+        <script src="./scripts/getElementByID-getElementsByClass.js"></script>
+        <script src="./scripts/get-set-attribute.js"></script>
+        <script src="./scripts/append.js"></script>
+        <script src="./scripts/styling-dom.js"></script>
+        <script src="./scripts/nodeList.js"></script>
+    </body>
+</html>
